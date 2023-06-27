@@ -12,7 +12,7 @@ project:
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
 # Before changing this, please reach out to us on discord to discuss your design.
-  # tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
+  tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
 
 # Keep a track of the submission yaml
 yaml_version: 4
@@ -39,15 +39,16 @@ documentation:
       After reset, the counter should increase by one every second with a 10MHz input clock.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
-  inputs:               
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+  inputs:
+    - I0
+    - I1
+    - I2
+    - I3
+    - I4
+    - I5
+    - I6
+    - I7
+    
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
     # - segment a
@@ -58,24 +59,24 @@ documentation:
     # - segment f
     # - segment g
     # - dot
-      - O1
-      - O2
-      - O3
-      - O4
-      - O5
-      - O6
-      - O7
-      - O8
+    - O1
+    - O2
+    - O3
+    - O4
+    - O5
+    - O6
+    - O7
+    - O8
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - I0
-    - I1
-    - I2
-    - I3
-    - I4
-    - I5
-    - I6
-    - I7
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
 
 # The following fields are optional
   tag:          "test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
