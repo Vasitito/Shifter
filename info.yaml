@@ -29,25 +29,22 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Uses a set of registers to divide the clock, and then some combinational logic
-      to convert from binary to decimal for the display.
-
-      Puts the bottom 8 bits of the counter on the bidirectional outputs.
+    A configurable barrel shifter for right and left shift of 5-bit numbers
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      After reset, the counter should increase by one every second with a 10MHz input clock.
+      Set bit 8 for the mode of shifting and bits 6-7 for the amount of shifting
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:
-    - I0
-    - I1
-    - I2
-    - I3
-    - I4
-    - I5
-    - I6
-    - I7
+    - I0/Number[0]
+    - I1/Number[1]
+    - I2/Number[2]
+    - I3/Number[3]
+    - I4/Number[4]
+    - I5/shift amount[0]
+    - I6/shift amount[1]
+    - I7/Mode of shifting
     
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
@@ -59,14 +56,14 @@ documentation:
     # - segment f
     # - segment g
     # - dot
-    - O1
-    - O2
-    - O3
-    - O4
-    - O5
-    - O6
-    - O7
-    - O8
+    - O0/Number[0]
+    - O1/Number[1]
+    - O2/Number[2]
+    - O3/Number[3]
+    - O4/Number[4]
+    - O5/Number[5]
+    - O6/Number[6]
+    - O7/Number[7]
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
