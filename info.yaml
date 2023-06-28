@@ -56,14 +56,14 @@ documentation:
     # - segment f
     # - segment g
     # - dot
-    - O0/Number[0]
-    - O1/Number[1]
-    - O2/Number[2]
-    - O3/Number[3]
-    - O4/Number[4]
-    - O5/Number[5]
-    - O6/Number[6]
-    - O7/Number[7]
+    - O0/Number[0]/segment a
+    - O1/Number[1]/segment b
+    - O2/Number[2]/segment c
+    - O3/Number[3]/segment d
+    - O4/Number[4]/segment e
+    - O5/Number[5]/segment f
+    - O6/Number[6]/segment g
+    - O7/Number[7]/dot
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
