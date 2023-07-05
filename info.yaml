@@ -23,18 +23,18 @@ yaml_version: 4
 #
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
-  author:       "Vasitito"
+  author:       "Vasileios Titopoulos"
   title:        "shifter"
   language:     "Wokwi"
   description:  "shifter"
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-    A configurable barrel shifter for right and left shift of 5-bit numbers
+    This particular implementation has the ability to shift right or left the input based on the invert bit. The invert bit determines as to whether the input is placed in the higher or lower order bits. For the shift amount two bits are available giving a range between 0 and 3 for the available shifting moves. The result is depicted in the seven segment display where every led depicts the bit position of the final number. For example, if the final result is the number 5, then the leds that are going to light up are the 2 and 0, because the number 5 is represented with the binary 00000101.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Set bit 8 for the mode of shifting and bits 6-7 for the amount of shifting
+      Set invert for the mode of shifting and bits 6-7 for the amount of shifting. Then insert the 5-bit input in which the shifting is going to be performed.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:
@@ -45,7 +45,7 @@ documentation:
     - I4/Number[4]
     - I5/shift amount[0]
     - I6/shift amount[1]
-    - I7/Mode of shifting
+    - I7/Invert
     
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
@@ -77,9 +77,9 @@ documentation:
     - none
 
 # The following fields are optional
-  tag:          "test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  tag:          "sorter"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
   external_hw:  ""      # Describe any external hardware needed
-  discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+  discord:      "vtitopou"      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
+  doc_link:     "https://github.com/Vasitito/Shifter/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
-  picture:      ""      # relative path to a picture in your repository
+  picture:      "./figures/figure1.png"      # relative path to a picture in your repository

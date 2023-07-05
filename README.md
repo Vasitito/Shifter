@@ -1,35 +1,28 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test.yaml/badge.svg)
 
-# What is Tiny Tapeout?
+# Barrel shifter
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip!
+This repository contains the implementation of a barrel shifter for five bit input. The logic diagram of the implementation is shown below.
 
-Go to https://tinytapeout.com for instructions!
+<p align="center">
+<img src=./figures/figure1.png>
+</p>
+<p align = "center">
+    <b>Figure 1:</b> The implementation of the barrel shifter for 5-bit input
+</p>
 
-## How to change the Wokwi project
+This particular implementation has the ability to shift right or left the input based on the invert bit. The invert bit determines as to whether the input is placed in the higher or lower order bits. For the shift amount two bits are available giving a range between 0 and 3 for the available shifting moves. The result is depicted in the seven segment display where every led depicts the bit position of the final number. For example, if the final result is the number 5, then the leds that are going to light up are the 2 and 0, because the number 5 is represented with the binary 00000101.
 
-Edit the [info.yaml](info.yaml) and change the wokwi_id to match your project.
+# Interface
 
-## How to enable the GitHub actions to build the ASIC files
-
-Please see the instructions for:
-
-- [Enabling GitHub Actions](https://tinytapeout.com/faq/#when-i-commit-my-change-the-gds-action-isnt-running)
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## How does it work?
-
-When you edit the info.yaml to choose a different ID, the [GitHub Action](.github/workflows/gds.yaml) will fetch the digital netlist of your design from Wokwi.
-
-After that, the action uses the open source ASIC tool called [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/) to build the files needed to fabricate an ASIC.
-
-## Resources
-
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://discord.gg/rPK2nSjxy8)
-
-## What next?
-
-- Share your GDS on Twitter, tag it [#tinytapeout](https://twitter.com/hashtag/tinytapeout?src=hashtag_click) and [link me](https://twitter.com/matthewvenn)!
+| Signals | Tiny Tapeout 4 signals |
+| :-----: | :--------------------: |
+|   In1   |        ui_in[0]        |
+|   In2   |        ui_in[1]        |
+|   In3   |        ui_in[2]        |
+|   In4   |        ui_in[3]        |
+|   in5   |        ui_in[4]        |
+| shift0  |        ui_in[5]        |
+| shift1  |        ui_in[6]        |
+| invert  |        ui_in[7]        |
+| output  |      uo_out[7:0]       |
