@@ -2,7 +2,7 @@
 
 # Barrel shifter
 
-This repository contains the implementation of a barrel shifter for five bit input. The logic diagram of the implementation is shown below.
+This repository contains the implementation of a barrel shifter for five bit input. The design was implemented through wokwi. The logic diagram of the implementation is shown below.
 
 <p align="center">
 <img src=./figures/figure1.png>
